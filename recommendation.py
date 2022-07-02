@@ -24,9 +24,8 @@ def readAndFixInput():
         f.write("\n".join(output))
         f.close()
 
+
 # TASK 3: Read new csv file
-
-
 def readNewInput():
     csvfile = open('output/Ratings.csv', newline='')
     spamreader = csv.reader(csvfile, delimiter=',', quotechar='\"')
@@ -70,6 +69,7 @@ def recommendByAge(ratings_dict, age, num):
     return list(map(lambda x: x['movie_name'], recommendation_score[:num]))
 
 
+# TASK 4: Read input and recommend
 def recommendNewUser(ratings_dict):
     csvfile = open('input/NewUsers.csv', newline='')
     spamreader = csv.reader(csvfile, delimiter=',', quotechar='\"')
